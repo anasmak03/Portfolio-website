@@ -1,0 +1,367 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo {
+    color: #303030;
+    margin: 11px;
+    font-family: 'Fraunces', serif;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-menu{
+    display: flex;
+}
+
+.nav-item{
+    margin: 20px;
+}
+
+.nav-link{
+    padding: 1rem;
+    text-transform: capitalize;
+    font-family: 'Fraunces', serif;
+    color: #303030;
+}
+
+.nav-link:hover{
+    font-family: 'Fraunces', serif;
+    color: #303030;
+    transition: all 0.5s ease-in;
+    font-weight: 700;
+}
+
+.hamburger{
+    position: absolute;
+    display: flex;
+    top: 19px;
+    right: 1rem;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.bar{
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+/* media query responsive */
+
+@media screen  and (min-width:150px){
+    .hamburger{
+        display: flex;
+    }
+    .nav-menu{
+        display: none;
+        width: 100%;
+    }
+    .nav-btn{
+        display: none;
+      
+    }
+   
+    .hamburger.active .bar:nth-child(2){
+        opacity:0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+        transition: all 1s ease-in;
+        
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+        transition: all 1s ease-in;
+    }
+    nav{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .nav-menu{
+        flex-direction: column;
+        width: 100%;
+    }
+   
+    .nav-item{
+        text-align: center;
+        margin-top: 30px;
+    }
+    .nav-link{
+        padding: .5rem 1rem;
+        
+        
+    }
+    .nav-menu.active{
+        display: flex;
+    }
+    .logo h1{
+        padding-top: 18px;
+    }
+}
+
+#about-me .parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.infos{
+    position: relative;
+    right: 250px;
+}
+.infos p{
+    font-size: 5rem;
+    text-transform: lighter;
+}
+.infos h2{
+    font-weight: 700;
+    font-size: 5rem;
+}
+.infos h3{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 4rem;
+    background-color: #14CFAE;
+}
+
+/* media queries responsive */
+@media screen and (max-width:765px){
+    .box img{
+        margin: 0 auto;
+        display: block;
+    }
+    .parent{
+        flex-wrap: wrap;
+        margin-bottom: 200px;
+    }
+    .infos{
+        position: relative;
+        right: 0;
+        font-size: 1rem;
+    }
+    .infos p{text-align: center;}
+    .infos h2{text-align: center;}
+    .infos h3{text-align: center;}
+
+}
+
+#who-iam{
+    background-image: url(img/px.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    position: relative;
+}
+#who-iam::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0,0,0,0.50);
+}
+
+#who-iam h1{
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 4rem;
+    color: #14CFAE;
+    font-family: 'Fraunces', serif;
+    text-transform: capitalize;
+}
+
+#parent{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#child{
+    margin: 12px;
+}
+#child h2{
+    text-align: center;
+    padding-bottom: 50px;
+    color: white;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+#child p{
+    text-align: center;
+    padding-bottom: 50px;
+    line-height: 1.8rem;
+    text-transform: capitalize;
+    font-family: 'Fraunces', serif;
+    color: white;
+}
+
+#who-iam  button{
+    margin: 0 auto;
+    display: block;
+    padding: 9px 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background-color: #14CFAE;
+    color: #303030;
+    border: none;
+    position: relative;
+    bottom: 40px;
+}
+
+button:hover{
+    transition: all 0.5s ease-out;
+    transform: translateY(15px);
+}
+
+/* media queries reponsive */
+
+@media screen and (max-width:765px){
+    #who-iam h1{
+        text-align: center;
+    }
+    #parent{
+        flex-wrap: wrap;
+    }
+
+
+}
+
+    /* section who  */
+
+.childs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+#who{margin-bottom: 50px;}
+.child1{
+    width: 40%;
+    text-align: start;
+    height: 340px;
+}
+.child1 h1{
+    font-size: 2.9rem;
+    padding-bottom: 15px;
+    font-family: 'Fraunces', sans-serif;
+}
+.child1 h3{
+    padding-bottom: 30px;
+    font-size: 2rem;
+    background-color: #14CFAE;
+    text-transform: capitalize;
+    font-family: 'Fraunces', serif;
+}
+.child1 p{
+    line-height: 2rem;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+/* media queries responsive */
+
+@media screen and (max-width:900px)
+{
+    .child2 img{
+        margin: 0 auto;
+        display: block;
+    }
+    .childs{
+        flex-wrap:wrap ;
+    }
+    .child1{
+        width: auto;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .child1 p{text-align: center;}
+    .child1 h1{text-align: center;}
+    .child1 h3{text-align: center;}
+}
+
+/* section work */
+#work{
+    background-color: #303030;
+    text-align: center;
+    font-family: 'Fraunces', sans-serif;
+}
+#work h1{
+    font-size: 4rem;
+    padding-bottom: 15px;
+  
+    font-family: 'Fraunces', serif;
+
+}
+#work h4{
+    color: #14CFAE;
+    font-size: 2rem;
+    padding-bottom: 50px;
+}
+
+.Grid{
+    display: grid;
+  margin-top: 20px;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 10px;
+  cursor: pointer;
+}
+.grid img:hover{
+    transition: all 0.5s ease-in-out;
+    transform: translateY(-19px);
+    opacity: 0.7;
+}
+.grid{
+    margin-bottom: 50px;
+}
+
+
+/* footer */
+footer{
+    background-color: #141414;
+    color: #14CFAE;
+    height: 25vh;
+}
+.con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  padding-bottom: 20px;
+}
+.con p{
+    font-size: 1.5rem;
+}
+.tact{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.contact{
+    padding-top: 50px;
+}
